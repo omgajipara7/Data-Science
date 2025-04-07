@@ -4,12 +4,17 @@ git add .
 
 git commit -m ""
 
+
+git push
+
+(optional)
+
 git branch -M main
 
 git push -u origin main
 
 
-b78aeaef07030719ae43e381d7fc92b9339bc558bc765b6f
+token=b78aeaef07030719ae43e381d7fc92b9339bc558bc765b6f
 
 
 
