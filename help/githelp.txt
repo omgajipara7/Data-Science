@@ -1,0 +1,23 @@
+git status
+
+git add .
+
+git commit -m ""
+
+git branch -M main
+
+git push -u origin main
+
+
+b78aeaef07030719ae43e381d7fc92b9339bc558bc765b6f
+
+
+
+kaggle datasets download -d ()
+
+unzip ().zip
+
+
+
+
+
