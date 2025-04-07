@@ -376,19 +376,56 @@
             </div>
         </div>
     </section>
-<!-- Learning Projects Section -->
+
+
+    <!-- Learning Projects Section -->
 <section id="learning" class="py-5 bg-light">
     <div class="container">
         <div class="section-header">
             <h2 class="fw-bold">Learnings</h2>
             <p class="text-muted">Fundamental concepts and techniques I've mastered</p>
         </div>
-        
+
         <div class="row">
+
+            <!-- Simple Linear Regression -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card card" onclick="showProjectModal(3)">
+                    <img src="assets/SimpleLinearRegression.jpg" class="card-img-top" alt="Simple Linear Regression">
+                    <div class="card-body">
+                        <h5 class="card-title">Simple Linear Regression</h5>
+                        <p class="card-text">Built a regression model to predict salary based on years of experience.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                            <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                            <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Regression/SimpleLinearRegression'">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multiple Linear Regression -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card card" onclick="showProjectModal(2)">
+                    <img src="assets/MultipleLinearRegression.jpg" class="card-img-top" alt="Multiple Linear Regression">
+                    <div class="card-body">
+                        <h5 class="card-title">Multiple Linear Regression</h5>
+                        <p class="card-text">Analyzed relationships between experience, age, and salary using linear regression.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                            <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                            <span class="tech-badge" style="background-color: #d0ebff; color: #1c7ed6;">Seaborn</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Regression/MultipleLinearRegression'">View Details</button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Polynomial Regression -->
             <div class="col-lg-4 col-md-6">
                 <div class="project-card card" onclick="showProjectModal(1)">
-                    <img src="assets/PolynomialRegression.jpg" class="card-img-top" alt="Polynomial Regression">
+                    <img src="assets/polynomialregression.png" class="card-img-top" alt="Polynomial Regression">
                     <div class="card-body">
                         <h5 class="card-title">Polynomial Regression</h5>
                         <p class="card-text">Mastering non-linear regression techniques for salary prediction.</p>
@@ -401,95 +438,11 @@
                     </div>
                 </div>
             </div>
-            
-<<<<<<< HEAD
-            <div class="row">
-                <!-- Polynomial Regression -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card card" onclick="showProjectModal(1)">
-                        <img src="assets/polynomialregression.png" class="card-img-top" alt="Polynomial Regression">
-                        <div class="card-body">
-                            <h5 class="card-title">Polynomial Regression</h5>
-                            <p class="card-text">Mastering non-linear regression techniques for salary prediction.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
-                                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
-                                <span class="tech-badge" style="background-color: #fff3bf; color: #e67700;">Matplotlib</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Regression/PolynomialRegression'">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- K-means Clustering -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card card" onclick="showProjectModal(2)">
-                        <img src="assets/clustering.png" class="card-img-top" alt="K-means Clustering">
-                        <div class="card-body">
-                            <h5 class="card-title">K-means Clustering</h5>
-                            <p class="card-text">Unsupervised learning for customer segmentation.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
-                                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
-                                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Seaborn</span>
-                            </div>
-                            <button class="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- LSTM Neural Network -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card card" onclick="showProjectModal(3)">
-                        <img src="assets/lstm.png" class="card-img-top" alt="LSTM Neural Network">
-                        <div class="card-body">
-                            <h5 class="card-title">LSTM Neural Network</h5>
-                            <p class="card-text">Time series forecasting for stock price prediction.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
-                                <span class="tech-badge" style="background-color: #ffe3e3; color: #fa5252;">TensorFlow</span>
-                                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Keras</span>
-                            </div>
-                            <button class="btn btn-primary">View Details</button>
-=======
-            <!-- Multiple Linear Regression -->
-            <div class="col-lg-4 col-md-6">
-                <div class="project-card card" onclick="showProjectModal(2)">
-                    <img src="assets/MultipleLinearRegression.jpg" class="card-img-top" alt="Multiple Linear Regression">
-                    <div class="card-body">
-                        <h5 class="card-title">Multiple Linear Regression</h5>
-                        <p class="card-text">Analyzed relationships between experience, age, and salary using linear regression.</p>
-                        <div class="mb-3">
-                            <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
-                            <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
-                            <span class="tech-badge" style="background-color: #d0ebff; color: #1c7ed6;">Seaborn</span>
->>>>>>> 73b60df (Initial commit for Diabetes Prediction project)
-                        </div>
-                        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Regression/MultipleLinearRegression'">View Details</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Simple Linear Regression -->
-<div class="col-lg-4 col-md-6">
-    <div class="project-card card" onclick="showProjectModal(3)">
-        <img src="assets/SimpleLinearRegression.jpg" class="card-img-top" alt="Simple Linear Regression">
-        <div class="card-body">
-            <h5 class="card-title">Simple Linear Regression</h5>
-            <p class="card-text">Built a regression model to predict salary based on years of experience.</p>
-            <div class="mb-3">
-                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
-                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
-                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
-            </div>
-            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Regression/SimpleLinearRegression'">View Details</button>
-        </div>
-    </div>
-</div>
 
-            </div>
         </div>
     </div>
 </section>
+
 
     <!-- Application Projects Section -->
     <section id="applications" class="py-5">
