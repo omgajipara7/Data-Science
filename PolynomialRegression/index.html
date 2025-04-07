@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as global index.html -->
+    <title>Polynomial Salary Predictor | Om Gajipara</title>
+</head>
+<body class="dark-theme">
+    <div id="particles-js"></div>
+    
+    <div class="container project-container py-5">
+        <!-- Back Button -->
+        <a href="../index.html" class="btn btn-back mb-4">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        
+        <!-- Project Header -->
+        <div class="project-header text-center mb-5">
+            <h1 class="project-title">
+                <i class="fas fa-chart-line"></i> Polynomial Salary Predictor
+            </h1>
+            <div class="project-meta">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-info">Scikit-learn</span>
+                <span class="badge bg-warning">Matplotlib</span>
+            </div>
+        </div>
+        
+        <!-- Project Content -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Problem Statement -->
+                <section class="project-section mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle"></i> Problem Statement
+                    </h2>
+                    <p>Given a dataset of employee salaries and experience levels, predict the salary using polynomial regression techniques while handling outliers and visualizing the results effectively.</p>
+                </section>
+                
+                <!-- Visualizations -->
+                <section class="project-section mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-images"></i> Visualizations
+                    </h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="viz-card">
+                                <img src="images/fit.png" alt="Regression Fit" class="img-fluid rounded">
+                                <div class="viz-caption">Polynomial Regression Fit (Degree=5)</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="viz-card">
+                                <img src="images/boxplot.png" alt="Data Distribution" class="img-fluid rounded">
+                                <div class="viz-caption">Salary Distribution with Outliers</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Code Snippet -->
+                <section class="project-section mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-code"></i> Key Implementation
+                    </h2>
+                    <pre><code class="language-python"># Polynomial Regression Implementation
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+from sklearn.pipeline import Pipeline
+
+# Create pipeline
+model = Pipeline([
+    ('poly', PolynomialFeatures(degree=5)),
+    ('linear', LinearRegression())
+])
+
+# Fit model
+model.fit(X_train, y_train)
+
+# Predict example
+example = pd.DataFrame([[6]], columns=["Level"])
+predicted_salary = model.predict(example.values)[0]
+print(f"Predicted salary for level 6: ${predicted_salary:,.2f}")</code></pre>
+                </section>
+                
+                <!-- How to Run -->
+                <section class="project-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-terminal"></i> How to Run
+                    </h2>
+                    <div class="run-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Clone the repository</h5>
+                                <pre><code>git clone https://github.com/omgajipara7/Data-Science.git</code></pre>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Navigate to project directory</h5>
+                                <pre><code>cd Data-Science/PolynomialRegression</code></pre>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Run Jupyter Notebook</h5>
+                                <pre><code>jupyter notebook Salary_Prediction.ipynb</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Same scripts as global index.html -->
+</body>
+</html>

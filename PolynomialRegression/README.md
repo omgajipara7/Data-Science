@@ -1,59 +1,69 @@
-# Polynomial-Salary-Predictor
-Polynomial Regression model to predict salary based on experience level using Python, Scikit-learn, and data visualization.
+# 📈 Polynomial Salary Predictor
 
-# 📈 Polynomial Regression - Salary Predictor
-
-This project demonstrates how to use **Polynomial Regression** to predict salary based on job level. It includes:
-
-- Outlier removal using IQR method
-- Polynomial features (degree=5)
-- Model training & testing
-- Data visualizations using seaborn & matplotlib
+A complete machine learning project using **Polynomial Regression** to predict salary based on employee job level. Built with Python, Jupyter, and Scikit-learn. Visualized beautifully with Seaborn and Matplotlib.
 
 ---
 
-## 🔍 Problem Statement
+## 🧠 What is Polynomial Regression?
 
-Given a dataset of employee salaries and levels, predict the salary using advanced regression techniques and visualize the results.
+Polynomial Regression is an advanced version of Linear Regression where the relationship between the independent variable \( x \) and dependent variable \( y \) is modeled as an nth degree polynomial.
 
----
+### 📐 Formula:
+For degree `n`, the equation is:
 
-## 📊 Technologies Used
+\[
+y = \theta_0 + \theta_1 x + \theta_2 x^2 + \dots + \theta_n x^n
+\]
 
-- Python (Pandas, NumPy)
-- Seaborn & Matplotlib
-- Scikit-learn (PolynomialFeatures, LinearRegression)
-- Jupyter Notebook
-
----
-
-## 📁 Files
-
-- `polynomial.csv` - Dataset
-- `Salary_Prediction.ipynb` - Jupyter notebook with full analysis
-- `README.md` - Project overview and instructions
+Where:
+- \( y \): predicted salary
+- \( x \): job level
+- \( \theta \): coefficients learned by the model
 
 ---
 
-## 📈 Visuals
+## 🧾 Problem Statement
 
-![Scatter](images/fit.png)  
-![Boxplot](images/boxplot.png)
-
-> *(Add plots after taking screenshots and saving them as `fit.png`, `boxplot.png` in an `/images` folder)*
+Predict the salary of an employee based on their job level using **polynomial regression**, and visualize the data to understand the model’s performance.
 
 ---
 
-## 🚀 How to Run
+## ✅ Workflow
 
-1. Clone this repo  
-2. Open `Salary_Prediction.ipynb` using Jupyter Notebook  
-3. Run all cells and observe the results  
+1. **Import Dataset**
+2. **Outlier Removal** using IQR method
+3. **Feature Transformation**: Convert to polynomial features
+4. **Model Training** with `LinearRegression`
+5. **Prediction**
+6. **Visualization** of data, model fit, and outliers
 
 ---
 
-## ✨ Prediction Example
+## 🔍 Dataset
 
+- `polynomial.csv` – contains two columns:
+  - `Level`: job level (1–10)
+  - `Salary`: corresponding salary
+
+---
+
+## 🔧 Technologies Used
+
+- **Python**
+  - Pandas
+  - NumPy
+  - Matplotlib
+  - Seaborn
+  - Scikit-learn
+- **Jupyter Notebook**
+
+---
+
+## 🔬 Exploratory Data Analysis
+
+- Checked for outliers using the **IQR method**:
 ```python
-example = pd.DataFrame([[6]], columns=["Level"])
-predicted_salary = model.predict(pf.transform(example.values))[0]
+Q1 = df['Salary'].quantile(0.25)
+Q3 = df['Salary'].quantile(0.75)
+IQR = Q3 - Q1
+filtered_df = df[~((df['Salary'] < (Q1 - 1.5 * IQR)) | (df['Salary'] > (Q3 + 1.5 * IQR)))]
