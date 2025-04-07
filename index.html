@@ -425,7 +425,7 @@
             <!-- Polynomial Regression -->
             <div class="col-lg-4 col-md-6">
                 <div class="project-card card" onclick="showProjectModal(1)">
-                    <img src="assets/polynomialregression.png" class="card-img-top" alt="Polynomial Regression">
+                    <img src="assets/PolynomialRegression.jpg" class="card-img-top" alt="Polynomial Regression">
                     <div class="card-body">
                         <h5 class="card-title">Polynomial Regression</h5>
                         <p class="card-text">Mastering non-linear regression techniques for salary prediction.</p>
@@ -599,7 +599,7 @@
                 id: 1,
                 title: "Polynomial Regression",
                 description: "This project demonstrates my mastery of polynomial regression techniques for modeling non-linear relationships. I implemented a salary prediction model that handles outliers and visualizes the polynomial fit. The project includes data preprocessing, feature engineering, and model evaluation.",
-                image: "assets/polynomialregression.png",
+                image: "assets/PolynomialRegression.jpg",
                 tech: [
                     { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
                     { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
@@ -626,54 +626,77 @@ print(f"Predicted salary for level 6: ")`
             },
             {
                 id: 2,
-                title: "K-means Clustering",
-                description: "In this project, I implemented customer segmentation using K-means clustering. The model groups customers based on purchasing behavior, helping businesses tailor marketing strategies. I used the elbow method to determine optimal clusters and visualized the results.",
-                image: "assets/clustering.png",
-                tech: [
-                    { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
-                    { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
-                    { name: "Seaborn", color: "#f3d9fa", textColor: "#9c36b5" }
-                ],
-                code: `# K-means Clustering
-from sklearn.cluster import KMeans
+title: "Multiple Linear Regression",
+description: "Analyzed relationships between experience, age, and salary using multiple linear regression. This model helps predict salary based on multiple independent variables and identifies which factors contribute most significantly.",
+image: "assets/MultipleLinearRegression.jpg",
+tech: [
+    { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
+    { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
+    { name: "Seaborn", color: "#d0ebff", textColor: "#1c7ed6" }
+],
+code: `# Multiple Linear Regression
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
 import seaborn as sns
+import matplotlib.pyplot as plt
 
-# Determine optimal clusters
-wcss = []
-for i in range(1, 11):
-    kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42)
-    kmeans.fit(X)
-    wcss.append(kmeans.inertia_)
-    
-# Plot the elbow method
-sns.lineplot(x=range(1, 11), y=wcss)
-plt.title('The Elbow Method')
-plt.xlabel('Number of clusters')
-plt.ylabel('WCSS')
+# Load dataset
+data = pd.read_csv("Salary_Data_MLR.csv")
+X = data[['Experience', 'Age']]
+y = data['Salary']
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+# Train the model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict and visualize
+predictions = model.predict(X_test)
+sns.regplot(x=y_test, y=predictions)
+plt.xlabel("Actual Salary")
+plt.ylabel("Predicted Salary")
+plt.title("Actual vs Predicted")
 plt.show()`
+
             },
             {
                 id: 3,
-                title: "LSTM Neural Network",
-                description: "This project showcases my understanding of time series forecasting using LSTM neural networks. I built a model to predict stock prices from historical data, implementing sequence processing and feature engineering to improve accuracy.",
-                image: "assets/lstm.png",
-                tech: [
-                    { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
-                    { name: "TensorFlow", color: "#ffe3e3", textColor: "#fa5252" },
-                    { name: "Keras", color: "#e6fcf5", textColor: "#099268" }
-                ],
-                code: `# LSTM Model
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
+title: "Simple Linear Regression",
+description: "Built a regression model to predict salary based on years of experience. This project demonstrates the fundamentals of linear regression and how to establish a linear relationship between two variables.",
+image: "assets/SimpleLinearRegression.jpg",
+tech: [
+    { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
+    { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
+    { name: "Matplotlib", color: "#f3d9fa", textColor: "#9c36b5" }
+],
+code: `# Simple Linear Regression
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
 
-model = Sequential()
-model.add(LSTM(50, return_sequences=True, input_shape=(X_train.shape[1], 1)))
-model.add(LSTM(50, return_sequences=False))
-model.add(Dense(25))
-model.add(Dense(1))
+# Load dataset
+data = pd.read_csv("Salary_Data.csv")
+X = data[['YearsExperience']]
+y = data['Salary']
 
-model.compile(optimizer='adam', loss='mean_squared_error')
-model.fit(X_train, y_train, batch_size=1, epochs=1)`
+# Train the model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict
+predictions = model.predict(X)
+
+# Plotting
+plt.scatter(X, y, color='blue')
+plt.plot(X, predictions, color='red')
+plt.title('Salary vs Experience')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()`
+
             },
             // Application Projects
             {
