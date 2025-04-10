@@ -31,3 +31,48 @@ This repository contains multiple hands-on projects and experiments that showcas
    git clone https://github.com/omgajipara7/Data-Science.git
 
 # Data-Science
+
+📦 Data Science
+│
+├── 📊 Data Engineering
+│   ├── Data Collection
+│   ├── Data Cleaning & Preprocessing
+│   ├── Feature Engineering
+│   └── ETL Pipelines (Extract, Transform, Load)
+│
+├── 📈 Data Analytics
+│   ├── Descriptive Analytics
+│   ├── Diagnostic Analytics
+│   ├── Predictive Analytics
+│   └── Exploratory Data Analysis (EDA)
+│
+└── 🧠 AI/ML
+    ├── ⚙️ Machine Learning (ML)
+    │   ├── Supervised Learning
+    │   │   ├── Linear Regression
+    │   │   ├── Logistic Regression
+    │   │   ├── Decision Trees
+    │   │   ├── Random Forest
+    │   │   ├── SVM (Support Vector Machines)
+    │   │   └── Gradient Boosting (XGBoost, LightGBM, etc.)
+    │   │
+    │   ├── Unsupervised Learning
+    │   │   ├── Clustering (K-Means, DBSCAN)
+    │   │   └── Dimensionality Reduction (PCA, t-SNE)
+    │   │
+    │   └── Semi-Supervised & Self-Supervised Learning
+    │
+    └── 🧠 Artificial Intelligence (AI)
+        ├── Deep Learning (DL)
+        │   ├── Neural Networks (ANN)
+        │   ├── Convolutional Neural Networks (CNN) – for images
+        │   ├── Recurrent Neural Networks (RNN) – for sequences
+        │   ├── LSTM / GRU – for time series & NLP
+        │   ├── Transformers (BERT, GPT, etc.)
+        │   └── GANs (Generative Adversarial Networks)
+        │
+        └── Reinforcement Learning (RL)
+            ├── Q-Learning
+            ├── Deep Q-Network (DQN)
+            ├── Policy Gradient
+            └── Actor-Critic Methods (A2C, PPO, etc.)
