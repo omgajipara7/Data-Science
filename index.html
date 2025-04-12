@@ -455,6 +455,24 @@
     </div>
 </div>
 
+<!-- Logistic Regression Multiple Input -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(5)">
+        <img src="assets/LogisticRegressionTwoClassMultipleInputCurve.jpg" class="card-img-top" alt="Logistic Regression Classification">
+        <div class="card-body">
+            <h5 class="card-title">Logistic Regression Classifier</h5>
+            <p class="card-text">Built a logistic regression model to predict student placement using CGPA and IQ. Visualized decision boundaries and saved trained models.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Classification/LogisticRegression'">View Details</button>
+        </div>
+    </div>
+</div>
+
+
 
         </div>
     </div>
@@ -472,7 +490,7 @@
             <div class="row">
                 <!-- Diabetes Prediction -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="project-card card" onclick="showProjectModal(5)">
+                    <div class="project-card card" onclick="showProjectModal(6)">
                         <img src="assets/diabetes.png" class="card-img-top" alt="Diabetes Prediction">
                         <div class="card-body">
                             <h5 class="card-title">Diabetes Prediction System</h5>
@@ -490,7 +508,7 @@
             
                 <!-- Sentiment Analysis -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="project-card card" onclick="showProjectModal(6)">
+                    <div class="project-card card" onclick="showProjectModal(7)">
                         <img src="assets/TweetSentiment.jpg" class="card-img-top" alt="Sentiment Analysis">
                         <div class="card-body">
                             <h5 class="card-title">Tweet Sentiment Analysis</h5>
@@ -741,9 +759,65 @@ prediction = model.predict([[1, 27, 57000]])  # 1 = Female
 print("Purchased" if prediction[0] else "Not Purchased")`
 
             },
-            // Application Projects
             {
                 id: 5,
+                title: "Logistic Regression Classifier",
+                description: "A logistic regression model predicting student placement based on CGPA and IQ. Included preprocessing, outlier handling, scaling, and decision region visualization.",
+                image: "assets/LogisticRegressionTwoClassMultipleInput.jpg",
+                tech: [
+                    { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
+                    { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
+                    { name: "Matplotlib", color: "#f3d9fa", textColor: "#9c36b5" }
+                ],
+                code: `# Logistic Regression for Placement Prediction
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from mlxtend.plotting import plot_decision_regions
+import pickle
+
+# Load data
+data = pd.read_csv("LogisticeRegressionMultiple.csv").drop('Unnamed: 0', axis=1)
+
+# Outlier handling
+maxr = data['iq'].mean() + (3 * data['iq'].std())
+minr = data['iq'].mean() - (3 * data['iq'].std())
+data = data[(data['iq'] >= minr) & (data['iq'] < maxr)]
+
+# Features and target
+x = data.iloc[:, :-1]
+y = data['placement']
+
+# Scale features
+scaler = StandardScaler()
+x_scaled = scaler.fit_transform(x)
+
+# Train test split
+x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=42)
+
+# Train model
+lr = LogisticRegression()
+lr.fit(x_train, y_train)
+
+# Prediction example
+new_data = pd.DataFrame([[6.8, 123]], columns=["cgpa", "iq"])
+new_scaled = scaler.transform(new_data)
+prediction = lr.predict(new_scaled)
+print("Placed" if prediction[0] else "Not Placed")
+
+# Save model and scaler
+with open("model.pkl", "wb") as f:
+    pickle.dump(lr, f)
+with open("scaler.pkl", "wb") as f:
+    pickle.dump(scaler, f)`
+            }
+,            
+            // Application Projects
+            {
+                id: 6,
                 title: "Diabetes Prediction System",
                 description: "A practical application of machine learning in healthcare, this system predicts diabetes risk based on health metrics like glucose levels, BMI, and age. I developed a user-friendly interface and achieved 85% accuracy on test data.",
                 image: "assets/diabetes.png",
@@ -769,7 +843,7 @@ prediction = model.predict([[6, 148, 72, 35, 0, 33.6, 0.627, 50]])
 print("Diabetic" if prediction[0] else "Not Diabetic")`
             },
             {
-                id: 6,
+                id: 7,
                 title: "Tweet Sentiment Analysis",
                 description: "This NLP application classifies tweets as positive or negative sentiment. I implemented text preprocessing, feature extraction, and model training using both traditional ML and transformer-based approaches.",
                 image: "assets/TweetSentiment.jpg",
