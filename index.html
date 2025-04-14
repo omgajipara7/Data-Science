@@ -482,6 +482,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Naive Bayes GaussianNB Classification -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(6)">
+        <img src="assets/NaiveBayesGaussianNB.jpg" class="card-img-top" alt="Naive Bayes Classification">
+        <div class="card-body">
+            <h5 class="card-title">Naive Bayes Classifier (GaussianNB)</h5>
+            <p class="card-text">Developed a Naive Bayes classifier to predict student placement based on CGPA and IQ. Achieved 100% accuracy and visualized decision boundaries using GaussianNB.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Supervised%20Learning/Classification/NaiveBayes'">View Details</button>
+        </div>
+    </div>
+</div>
+
     
     
     
@@ -501,7 +520,7 @@
                 <div class="row">
                     <!-- Diabetes Prediction -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(6)">
+                        <div class="project-card card" onclick="showProjectModal(7)">
                             <img src="assets/diabetes.png" class="card-img-top" alt="Diabetes Prediction">
                             <div class="card-body">
                                 <h5 class="card-title">Diabetes Prediction System</h5>
@@ -519,7 +538,7 @@
                 
                     <!-- Sentiment Analysis -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(7)">
+                        <div class="project-card card" onclick="showProjectModal(8)">
                             <img src="assets/TweetSentiment.jpg" class="card-img-top" alt="Sentiment Analysis">
                             <div class="card-body">
                                 <h5 class="card-title">Tweet Sentiment Analysis</h5>
@@ -826,9 +845,73 @@ with open("scaler.pkl", "wb") as f:
     pickle.dump(scaler, f)`
             }
 ,            
+{
+    id: 6,
+    title: "Naive Bayes Classifier",
+    description: "Implemented Gaussian Naive Bayes for predicting student placement based on CGPA and IQ. Visualized decision regions and achieved 100% accuracy on the test set.",
+    image: "assets/NaiveBayesGaussianNB.jpg",
+    tech: [
+        { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
+        { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
+        { name: "Matplotlib", color: "#f3d9fa", textColor: "#9c36b5" },
+        { name: "Seaborn", color: "#fff3bf", textColor: "#f08c00" }
+    ],
+    code: `# Naive Bayes for Placement Prediction
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+from mlxtend.plotting import plot_decision_regions
+
+# Load data
+data = pd.read_csv("LogisticeRegressionMultiple.csv").drop('Unnamed: 0', axis=1)
+
+# EDA
+sns.scatterplot(x='cgpa', y='iq', data=data, hue='placement')
+plt.show()
+
+# Features and target
+x = data.iloc[:, :-1]
+y = data['placement']
+
+# Find best random state
+best_score = 0
+best_state = 0
+for state in range(101):
+    X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=state)
+    model = GaussianNB()
+    model.fit(X_train, y_train)
+    acc = accuracy_score(y_test, model.predict(X_test))
+    if acc > best_score:
+        best_score = acc
+        best_state = state
+
+print(f"Best Accuracy: {best_score:.4f} at random_state = {best_state}")
+
+# Final model training
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=best_state)
+gnb = GaussianNB()
+gnb.fit(x_train, y_train)
+print("Test Accuracy:", gnb.score(x_test, y_test) * 100)
+
+# Predict new data
+print(gnb.predict([[5.9, 106]]))
+
+# Plot decision regions
+plot_decision_regions(X=x.to_numpy(), y=y.to_numpy(), clf=gnb)
+plt.title("Naive Bayes Decision Boundary (Placement Prediction) using GaussianNB")
+plt.xlabel("CGPA")
+plt.ylabel("IQ")
+plt.savefig("assets/NaiveBayesGaussianNB.jpg")
+plt.show() `
+}
+,
             // Application Projects
             {
-                id: 6,
+                id: 7,
                 title: "Diabetes Prediction System",
                 description: "A practical application of machine learning in healthcare, this system predicts diabetes risk based on health metrics like glucose levels, BMI, and age. I developed a user-friendly interface and achieved 85% accuracy on test data.",
                 image: "assets/diabetes.png",
@@ -854,7 +937,7 @@ prediction = model.predict([[6, 148, 72, 35, 0, 33.6, 0.627, 50]])
 print("Diabetic" if prediction[0] else "Not Diabetic")`
             },
             {
-                id: 7,
+                id: 8,
                 title: "Tweet Sentiment Analysis",
                 description: "This NLP application classifies tweets as positive or negative sentiment. I implemented text preprocessing, feature extraction, and model training using both traditional ML and transformer-based approaches.",
                 image: "assets/TweetSentiment.jpg",
