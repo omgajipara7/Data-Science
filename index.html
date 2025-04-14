@@ -439,27 +439,31 @@
                         </div>
                     </div>
                 </div>
-                <!-- Decision Tree Classification -->
-    <div class="col-lg-4 col-md-6">
-        <div class="project-card card" onclick="showProjectModal(4)">
-            <img src="assets/DesicionTree.jpg" class="card-img-top" alt="Decision Tree Classification">
-            <div class="card-body">
-                <h5 class="card-title">Decision Tree Classification</h5>
-                <p class="card-text">Implemented a Decision Tree Classifier to predict purchasing behavior based on user features like Age and Estimated Salary.</p>
-                <div class="mb-3">
-                    <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
-                    <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
-                    <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
-                </div>
-                <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Supervised%20Learning/Classification'">View Details</button>
+
+
+<!-- Decision Tree Regressor -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(7)">
+        <img src="assets/DecisionTreeRegressionCurve1.jpg" class="card-img-top" alt="Decision Tree Regressor">
+        <div class="card-body">
+            <h5 class="card-title">Decision Tree Regressor</h5>
+            <p class="card-text">Built a Decision Tree Regressor to predict salary based on experience and age. Tuned hyperparameters and visualized prediction curves and the decision tree.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
             </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Supervised%20Learning/Regression/Decision%20Tree%20Regression'">View Details</button>
         </div>
     </div>
-    
+</div>
+
+
     <!-- Logistic Regression Multiple Input -->
     <div class="col-lg-4 col-md-6">
         <div class="project-card card" onclick="showProjectModal(5)">
-            <img src="assets/LogisticRegressionTwoClassMultipleCurve.jpg" class="card-img-top" alt="Logistic Regression Classification">
+            <img src="assets/LogisticRegressionTwoClassMultipleInput.jpg" class="card-img-top" alt="Logistic Regression Classification">
             <div class="card-body">
                 <h5 class="card-title">Logistic Regression Classifier</h5>
                 <p class="card-text">Built a logistic regression model to predict student placement using CGPA and IQ. Visualized decision boundaries and saved trained models.</p>
@@ -473,6 +477,8 @@
         </div>
     </div>
 
+               
+                
     <!-- Naive Bayes GaussianNB Classification -->
 <div class="col-lg-4 col-md-6">
     <div class="project-card card" onclick="showProjectModal(6)">
@@ -490,6 +496,24 @@
         </div>
     </div>
 </div>
+
+ <!-- Decision Tree Classification -->
+ <div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(4)">
+        <img src="assets/DesicionTreeClassified.jpg" class="card-img-top" alt="Decision Tree Classification">
+        <div class="card-body">
+            <h5 class="card-title">Decision Tree Classification</h5>
+            <p class="card-text">Implemented a Decision Tree Classifier to predict purchasing behavior based on user features like Age and Estimated Salary.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Supervised%20Learning/Classification'">View Details</button>
+        </div>
+    </div>
+</div>
+
 
     
     
@@ -510,7 +534,7 @@
                 <div class="row">
                     <!-- Diabetes Prediction -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(7)">
+                        <div class="project-card card" onclick="showProjectModal(8)">
                             <img src="assets/diabetes.png" class="card-img-top" alt="Diabetes Prediction">
                             <div class="card-body">
                                 <h5 class="card-title">Diabetes Prediction System</h5>
@@ -528,7 +552,7 @@
                 
                     <!-- Sentiment Analysis -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(8)">
+                        <div class="project-card card" onclick="showProjectModal(9)">
                             <img src="assets/TweetSentiment.jpg" class="card-img-top" alt="Sentiment Analysis">
                             <div class="card-body">
                                 <h5 class="card-title">Tweet Sentiment Analysis</h5>
@@ -757,7 +781,7 @@ plt.show()`
                 id: 4,
 title: "Decision Tree Classifier",
 description: "A classification model to predict whether a user will purchase a product based on demographics like gender, age, and salary. Tuned the Decision Tree for optimal depth and evaluated its performance using accuracy scores.",
-image: "assets/DesicionTreeClassified.jpg",
+image: "assets/DesicionTree.jpg",
 tech: [
     { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
     { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
@@ -783,7 +807,7 @@ print("Purchased" if prediction[0] else "Not Purchased")`
                 id: 5,
                 title: "Logistic Regression Classifier",
                 description: "A logistic regression model predicting student placement based on CGPA and IQ. Included preprocessing, outlier handling, scaling, and decision region visualization.",
-                image: "assets/LogisticRegressionTwoClassMultipleInput.jpg",
+                image: "assets/LogisticRegressionTwoClassMultipleCurve.jpg",
                 tech: [
                     { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
                     { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
@@ -901,11 +925,68 @@ plt.xlabel("CGPA")
 plt.ylabel("IQ")
 plt.savefig("assets/NaiveBayesGaussianNB.jpg")
 plt.show() `
-}
-,
+},
+{
+    id: 7,
+    title: "Decision Tree Regressor",
+    description: "Built a Decision Tree Regressor to predict salary based on features like YearsExperience and Age. Performed hyperparameter tuning for max_depth and visualized results using Matplotlib and Seaborn.",
+    image: "assets/DecisionTreeRegressionCurve1.jpg",
+    image1: "assets/DecisionTreeRegressionCurve2.jpg",  
+    image2: "assets/DecisionTreeRegressor.jpg",  
+
+
+    tech: [
+        { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
+        { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
+        { name: "Matplotlib", color: "#f3d9fa", textColor: "#9c36b5" },
+        { name: "Seaborn", color: "#fff3bf", textColor: "#f08c00" }
+    ],
+    code: `# Decision Tree Regressor for Salary Prediction
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.tree import DecisionTreeRegressor, plot_tree
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import r2_score
+
+# Load data
+data = pd.read_csv("MultipleLinearRegression.csv")
+x = data.iloc[:, :-1]
+y = data['Salary']
+
+# Scale features
+scaler = StandardScaler()
+x_scaled = scaler.fit_transform(x)
+
+# Hyperparameter tuning
+best_score, best_state, best_depth, min_diff = 0, 0, 0, float('inf')
+for state in range(101):
+    X_train, X_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=state)
+    for depth in range(1, 21):
+        model = DecisionTreeRegressor(max_depth=depth, random_state=state)
+        model.fit(X_train, y_train)
+        diff = abs(model.score(X_train, y_train) - model.score(X_test, y_test))
+        if model.score(X_test, y_test) > best_score or (model.score(X_test, y_test) == best_score and diff < min_diff):
+            best_score, best_state, best_depth, min_diff = model.score(X_test, y_test), state, depth, diff
+
+# Train final model
+x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=best_state)
+dtr = DecisionTreeRegressor(max_depth=best_depth)
+dtr.fit(x_train, y_train)
+
+# Predict & plot
+y_pred = dtr.predict(x_scaled)
+plot_tree(dtr, filled=True, rounded=True, feature_names=data.columns[:-1].tolist())
+plt.savefig("assets/DecisionTreeRegressor.jpg")
+sns.scatterplot(x='YearsExperience', y='Salary', data=data)
+sns.lineplot(x='YearsExperience', y=y_pred, data=data, color='red')
+plt.savefig("assets/DecisionTreeRegressionCurve1.jpg")`
+},
             // Application Projects
             {
-                id: 7,
+                id: 8,
                 title: "Diabetes Prediction System",
                 description: "A practical application of machine learning in healthcare, this system predicts diabetes risk based on health metrics like glucose levels, BMI, and age. I developed a user-friendly interface and achieved 85% accuracy on test data.",
                 image: "assets/diabetes.png",
@@ -931,7 +1012,7 @@ prediction = model.predict([[6, 148, 72, 35, 0, 33.6, 0.627, 50]])
 print("Diabetic" if prediction[0] else "Not Diabetic")`
             },
             {
-                id: 8,
+                id: 9,
                 title: "Tweet Sentiment Analysis",
                 description: "This NLP application classifies tweets as positive or negative sentiment. I implemented text preprocessing, feature extraction, and model training using both traditional ML and transformer-based approaches.",
                 image: "assets/TweetSentiment.jpg",
