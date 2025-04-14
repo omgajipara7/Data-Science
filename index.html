@@ -1,14 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -850,6 +840,10 @@ with open("scaler.pkl", "wb") as f:
     title: "Naive Bayes Classifier",
     description: "Implemented Gaussian Naive Bayes for predicting student placement based on CGPA and IQ. Visualized decision regions and achieved 100% accuracy on the test set.",
     image: "assets/NaiveBayesGaussianNB.jpg",
+    image1: "assets/NaiveBayesMultinomialNB.jpg",
+    image2: "assets/NaiveBayesBernoulliNB.jpg",
+
+
     tech: [
         { name: "Python", color: "#e9f7fe", textColor: "#0366d6" },
         { name: "Scikit-learn", color: "#e6fcf5", textColor: "#099268" },
@@ -979,8 +973,17 @@ model.fit(X_train_vec, y_train)`
                 <h2>${project.title}</h2>
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <img src="${project.image}" class="img-fluid rounded" alt="${project.title}">
-                    </div>
+    ${project.image ? `
+        <img src="${project.image}" class="img-fluid rounded" alt="${project.title}" onerror="this.style.display='none'">
+    ` : ''}
+    
+    ${project.image1 ? `
+        <img src="${project.image1}" class="img-fluid rounded mt-2" alt="${project.title} (Additional)" onerror="this.style.display='none'">
+    ` : ''}
+    ${project.image2 ? `
+        <img src="${project.image2}" class="img-fluid rounded mt-2" alt="${project.title} (Additional)" onerror="this.style.display='none'">
+    ` : ''}
+</div>
                     <div class="col-md-6">
                         <h4>Project Details</h4>
                         <p>${project.description}</p>
