@@ -514,6 +514,25 @@
     </div>
 </div>
 
+<!-- KNN Classifier -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(8)">
+        <img src="assets/KNNClassifierBoundary.jpg" class="card-img-top" alt="KNN Classifier">
+        <div class="card-body">
+            <h5 class="card-title">KNN Classifier</h5>
+            <p class="card-text">Built a K-Nearest Neighbors Classifier to predict purchase decisions using age and salary. Applied scaling, hyperparameter tuning, and plotted decision boundary and elbow curve.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/Machine%20Learning/Supervised%20Learning/Classification/KNN'">
+                View Code
+            </button>
+        </div>
+    </div>
+</div>
 
     
     
@@ -534,7 +553,7 @@
                 <div class="row">
                     <!-- Diabetes Prediction -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(8)">
+                        <div class="project-card card" onclick="showProjectModal(9)">
                             <img src="assets/diabetes.png" class="card-img-top" alt="Diabetes Prediction">
                             <div class="card-body">
                                 <h5 class="card-title">Diabetes Prediction System</h5>
@@ -552,7 +571,7 @@
                 
                     <!-- Sentiment Analysis -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(9)">
+                        <div class="project-card card" onclick="showProjectModal(10)">
                             <img src="assets/TweetSentiment.jpg" class="card-img-top" alt="Sentiment Analysis">
                             <div class="card-body">
                                 <h5 class="card-title">Tweet Sentiment Analysis</h5>
@@ -984,9 +1003,79 @@ sns.scatterplot(x='YearsExperience', y='Salary', data=data)
 sns.lineplot(x='YearsExperience', y=y_pred, data=data, color='red')
 plt.savefig("assets/DecisionTreeRegressionCurve1.jpg")`
 },
+{
+    "id": 8,
+    "title": "KNN Classifier",
+    "description": "Implemented a K-Nearest Neighbors Classifier to predict customer purchase behavior based on age and estimated salary. Included hyperparameter tuning, error analysis, decision boundary visualization, and cross-validation.",
+    "image": "assets/KNNClassifierBoundarybefore.jpg",
+    "image1": "assets/KNNClassifierBoundary.jpg",
+    "tech": [
+        { "name": "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+        { "name": "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+        { "name": "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+        { "name": "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" }
+    ],
+    "code": `# KNN Classifier for Purchase Prediction
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix, classification_report
+from mlxtend.plotting import plot_decision_regions
+import seaborn as sns
+
+data = pd.read_csv("DesicionTree.csv")
+data = data.drop(["User ID", "Gender"], axis=1)
+x = data.iloc[:, :-1]
+y = data["Purchased"]
+
+scaler = StandardScaler()
+x_scaled = pd.DataFrame(scaler.fit_transform(x), columns=x.columns)
+
+# Best K & Random State
+best_diff = float('inf')
+for state in range(100):
+    x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=state)
+    for k in range(1, 21):
+        model = KNeighborsClassifier(n_neighbors=k)
+        model.fit(x_train, y_train)
+        diff = abs(model.score(x_train, y_train) - model.score(x_test, y_test))
+        if diff < best_diff:
+            best_diff = diff
+            best_state = state
+            best_k = k
+
+x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=best_state)
+knn = KNeighborsClassifier(n_neighbors=best_k)
+knn.fit(x_train, y_train)
+
+# Visualization & Evaluation
+plt.figure(figsize=(7, 4))
+plot_decision_regions(X=x_scaled.to_numpy(), y=y.to_numpy(), clf=knn)
+plt.title("KNN Decision Boundary")
+plt.savefig("assets/KNN_Decision_Boundary.jpg")
+
+error_rate = []
+for k in range(1, 31):
+    model = KNeighborsClassifier(n_neighbors=k)
+    model.fit(x_train, y_train)
+    pred_k = model.predict(x_test)
+    error_rate.append(np.mean(pred_k != y_test))
+
+plt.figure(figsize=(10, 6))
+plt.plot(range(1, 31), error_rate, marker='o')
+plt.title("Elbow Method")
+plt.savefig("assets/KNN_Elbow_Method.jpg")
+
+y_pred = knn.predict(x_test)
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))`
+},
             // Application Projects
             {
-                id: 8,
+                id: 9,
                 title: "Diabetes Prediction System",
                 description: "A practical application of machine learning in healthcare, this system predicts diabetes risk based on health metrics like glucose levels, BMI, and age. I developed a user-friendly interface and achieved 85% accuracy on test data.",
                 image: "assets/diabetes.png",
@@ -1012,7 +1101,7 @@ prediction = model.predict([[6, 148, 72, 35, 0, 33.6, 0.627, 50]])
 print("Diabetic" if prediction[0] else "Not Diabetic")`
             },
             {
-                id: 9,
+                id: 10,
                 title: "Tweet Sentiment Analysis",
                 description: "This NLP application classifies tweets as positive or negative sentiment. I implemented text preprocessing, feature extraction, and model training using both traditional ML and transformer-based approaches.",
                 image: "assets/TweetSentiment.jpg",
