@@ -384,11 +384,20 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="fw-bold">Learnings</h2>
-                <p class="text-muted">Fundamental concepts and techniques I've mastered</p>
+
+
+        <!-- Supervised Learning Projects Section -->
+
+        <section id="supervised" class="py-5 bg-light">
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fw-bold">Supervised Learnings</h2>
+                <p class="text-muted">Projects exploring labeled data using classification and regression models</p>
             </div>
     
             <div class="row">
-    
+
                 <!-- Simple Linear Regression -->
                 <div class="col-lg-4 col-md-6">
                     <div class="project-card card" onclick="showProjectModal(3)">
@@ -459,6 +468,48 @@
     </div>
 </div>
 
+<!-- KNN Regressor -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(9)">
+        <img src="assets/KNNRegressor1.jpg" class="card-img-top" alt="KNN Regressor">
+        <div class="card-body">
+            <h5 class="card-title">KNN Regressor</h5>
+            <p class="card-text">Developed a K-Nearest Neighbors Regressor to predict salary using experience and age data with visualization.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Supervised%20Learning/Regression/KNN%20Regressor'">
+                View Code
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- SVM Regressor -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(10)">
+      <img src="assets/SVMRegressor1.jpg" class="card-img-top" alt="SVM Regressor">
+      <div class="card-body">
+        <h5 class="card-title">SVM Regressor</h5>
+        <p class="card-text">
+            Built an SVM model to predict salary from CGPA, optimized across 100+ random states using RBF kernel for peak accuracy.        </p>
+        <div class="mb-3">
+          <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+          <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+          <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+          <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Supervised%20Learning/Regression/SVM%20Regressor'">
+          View Code
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
 
     <!-- Logistic Regression Multiple Input -->
     <div class="col-lg-4 col-md-6">
@@ -497,6 +548,28 @@
     </div>
 </div>
 
+
+<!-- SVM Classifier -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card card" onclick="showProjectModal(11)">
+        <img src="assets/SVMClassifier.jpg" class="card-img-top" alt="SVM Classifier">
+        <div class="card-body">
+            <h5 class="card-title">SVM Classifier</h5>
+            <p class="card-text">Built a Support Vector Machine model on social network ad data to classify purchasing behavior based on Age and Estimated Salary. Visualized results with decision regions.</p>
+            <div class="mb-3">
+                <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Supervised%20Learning/Classification/DecisionTree'">
+                View Code
+            </button>
+        </div>
+    </div>
+</div>
+
+
  <!-- Decision Tree Classification -->
  <div class="col-lg-4 col-md-6">
     <div class="project-card card" onclick="showProjectModal(4)">
@@ -534,6 +607,8 @@
     </div>
 </div>
 
+
+
     
     
     
@@ -541,6 +616,85 @@
         </div>
     </section>
     
+ 
+
+
+
+
+<!-- Unsupervised Learning Projects Section -->
+<section id="unsupervised" class="py-5 bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="fw-bold">Unsupervised Learning</h2>
+            <p class="text-muted">Explored hidden patterns in unlabeled data using clustering and dimensionality reduction techniques.</p>
+        </div>
+
+        <div class="row">
+
+            <!-- K-Means Clustering -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card card" onclick="showProjectModal(14)">
+                    <img src="assets/KMeansClustering1.jpg" class="card-img-top" alt="K-Means Clustering">
+                    <div class="card-body">
+                        <h5 class="card-title">K-Means Clustering</h5>
+                        <p class="card-text">Identified customer segments using K-Means algorithm and visualized clusters with matplotlib.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                            <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                            <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Unsupervised%20Learning/KMeansClustering'">View Code</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hierarchical Clustering -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card card" onclick="showProjectModal(15)">
+                    <img src="assets/HierarchicalClustering.jpg" class="card-img-top" alt="Hierarchical Clustering">
+                    <div class="card-body">
+                        <h5 class="card-title">Hierarchical Clustering</h5>
+                        <p class="card-text">Applied agglomerative clustering to group data and created dendrograms for cluster visualization.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                            <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                            <span class="tech-badge" style="background-color: #fff3bf; color: #f08c00;">Seaborn</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Unsupervised%20Learning/HierarchicalClustering'">View Code</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PCA (Dimensionality Reduction) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card card" onclick="showProjectModal(16)">
+                    <img src="assets/PCA.jpg" class="card-img-top" alt="Principal Component Analysis">
+                    <div class="card-body">
+                        <h5 class="card-title">Principal Component Analysis (PCA)</h5>
+                        <p class="card-text">Reduced high-dimensional data to visualize key patterns and improve model performance.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge" style="background-color: #e9f7fe; color: #0366d6;">Python</span>
+                            <span class="tech-badge" style="background-color: #e6fcf5; color: #099268;">Scikit-learn</span>
+                            <span class="tech-badge" style="background-color: #f3d9fa; color: #9c36b5;">Matplotlib</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.location.href='https://github.com/omgajipara7/Data-Science/tree/main/AI%3AML/Machine%20Learning/Unsupervised%20Learning/PCA'">View Code</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
     
         <!-- Application Projects Section -->
         <section id="applications" class="py-5">
@@ -553,7 +707,7 @@
                 <div class="row">
                     <!-- Diabetes Prediction -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(9)">
+                        <div class="project-card card" onclick="showProjectModal(12)">
                             <img src="assets/diabetes.png" class="card-img-top" alt="Diabetes Prediction">
                             <div class="card-body">
                                 <h5 class="card-title">Diabetes Prediction System</h5>
@@ -571,7 +725,7 @@
                 
                     <!-- Sentiment Analysis -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="project-card card" onclick="showProjectModal(10)">
+                        <div class="project-card card" onclick="showProjectModal(13)">
                             <img src="assets/TweetSentiment.jpg" class="card-img-top" alt="Sentiment Analysis">
                             <div class="card-body">
                                 <h5 class="card-title">Tweet Sentiment Analysis</h5>
@@ -626,43 +780,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="fw-bold">Get In Touch</h2>
-                <p class="text-muted">Have a project or want to collaborate? Reach out!</p>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <form id="contactForm">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -674,7 +792,7 @@
                 <a href="#"><i class="fab fa-kaggle"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            <p class="mb-0">&copy; 2023 Data Science Portfolio. All rights reserved.</p>
+            <p class="mb-0">&copy; 2025 Data Science Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1004,18 +1122,18 @@ sns.lineplot(x='YearsExperience', y=y_pred, data=data, color='red')
 plt.savefig("assets/DecisionTreeRegressionCurve1.jpg")`
 },
 {
-    "id": 8,
-    "title": "KNN Classifier",
-    "description": "Implemented a K-Nearest Neighbors Classifier to predict customer purchase behavior based on age and estimated salary. Included hyperparameter tuning, error analysis, decision boundary visualization, and cross-validation.",
-    "image": "assets/KNNClassifierBoundarybefore.jpg",
-    "image1": "assets/KNNClassifierBoundary.jpg",
-    "tech": [
-        { "name": "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
-        { "name": "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
-        { "name": "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
-        { "name": "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" }
+    id: 8,
+    title: "KNN Classifier",
+    description: "Implemented a K-Nearest Neighbors Classifier to predict customer purchase behavior based on age and estimated salary. Included hyperparameter tuning, error analysis, decision boundary visualization, and cross-validation.",
+    image: "assets/KNNClassifierBoundarybefore.jpg",
+    image1: "assets/KNNClassifierBoundary.jpg",
+    tech: [
+        { name: "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+        { name: "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+        { name: "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+        { name: "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" }
     ],
-    "code": `# KNN Classifier for Purchase Prediction
+    code : `# KNN Classifier for Purchase Prediction
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -1073,9 +1191,411 @@ y_pred = knn.predict(x_test)
 print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))`
 },
+{
+    id: 9,
+    title: "KNN Regressor",
+    description: "Implemented a K-Nearest Neighbors Regressor to predict salary based on years of experience and age. Included hyperparameter tuning (best K and random state), scaled features, and plotted predicted vs actual salaries using Seaborn and Matplotlib.",
+    image: "assets/KNNRegressor0.jpg",
+    image1: "assets/KNNRegressor1.jpg",
+    image2: "assets/KNNRegressor2.jpg",
+
+    tech: [
+        { name: "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+        { name: "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+        { name: "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+        { name: "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" }
+    ],
+    code: `# KNN Regressor for Salary Prediction
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.metrics import r2_score
+
+data = pd.read_csv("MultipleLinearRegression.csv")
+x = data.iloc[:, :-1]
+y = data["Salary"]
+
+scaler = StandardScaler()
+x_scaled = pd.DataFrame(scaler.fit_transform(x), columns=x.columns)
+
+# Finding best K and random_state
+best_diff = float('inf')
+for random_state in range(100):
+    x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=random_state)
+    for k in range(1, 21):
+        model = KNeighborsRegressor(n_neighbors=k)
+        model.fit(x_train, y_train)
+        diff = abs(model.score(x_train, y_train) - model.score(x_test, y_test))
+        if diff < best_diff:
+            best_diff = diff
+            best_k = k
+            best_state = random_state
+
+# Final model
+x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=best_state)
+model = KNeighborsRegressor(n_neighbors=best_k)
+model.fit(x_train, y_train)
+
+# Predictions
+y_pred = model.predict(x_scaled)
+
+# Plot: YearsExperience vs Salary
+plt.figure(figsize=(7.5, 4))
+sns.scatterplot(x='YearsExperience', y='Salary', data=data, label='Original')
+sns.lineplot(x='YearsExperience', y=y_pred, data=data, color='red', label='Predicted')
+plt.title("KNN Regression - Experience vs Salary")
+plt.savefig("assets/KNNRegressor.jpg")
+
+# Plot: Age vs Salary
+plt.figure(figsize=(8, 5))
+sns.scatterplot(x='Age', y='Salary', data=data, label='Original')
+sns.lineplot(x='Age', y=y_pred, data=data, color='blue', label='Predicted')
+plt.title("KNN Regression - Age vs Salary")
+plt.savefig("assets/KNNRegressorBefore.jpg")
+`
+},
+{
+    id: 10,
+    title: "SVM Regressor",
+    description: "Developed a Support Vector Regressor (SVM) to predict placement package based on CGPA. Performed standardization and tuned 100+ random states to get best R² accuracy. Final results visualized using Seaborn and Matplotlib.",
+    image: "assets/SVMRegressor.jpg",
+    image1: "assets/SVMRegressor1.jpg",
+    tech: [
+      { name: "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+      { name: "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+      { name: "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+      { name: "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" }
+    ],
+    code: `# SVM Regressor for CGPA vs Package Prediction
+  import pandas as pd
+  import numpy as np
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  from sklearn.model_selection import train_test_split
+  from sklearn.preprocessing import StandardScaler
+  from sklearn.svm import SVM
+  from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+  
+  data = pd.read_csv("SimpleLinearRegression.csv")
+  x = data[['cgpa']]
+  y = data['package']
+  
+  scaler = StandardScaler()
+  x_scaled = scaler.fit_transform(x)
+  
+  best_score = 0
+  best_state = 0
+  min_diff = float('inf')
+  
+  for state in range(101):
+      X_train, X_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=state)
+      model = SVM(kernel='rbf')
+      model.fit(X_train, y_train)
+      train_acc = model.score(X_train, y_train)
+      test_acc = model.score(X_test, y_test)
+      diff = abs(train_acc - test_acc)
+      if test_acc > best_score or (test_acc == best_score and diff < min_diff):
+          best_score = test_acc
+          best_state = state
+          min_diff = diff
+  
+  print("Best Random State:", best_state)
+  print(f"Best Test Accuracy: {best_score*100:.2f}%")
+  print(f"Min Train-Test Diff: {min_diff:.4f}")
+  
+  x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=best_state)
+  svm = SVM(kernel='rbf')
+  svm.fit(x_train, y_train)
+  y_pred = svm.predict(x_scaled)
+  
+  print("R² Score:", r2_score(y, y_pred))
+  print("MAE:", mean_absolute_error(y, y_pred))
+  print("MSE:", mean_squared_error(y, y_pred))
+  
+  cgpa_value = 6.89
+  predicted_package = svm.predict(scaler.transform([[cgpa_value]]))
+  print(f"Predicted package for CGPA {cgpa_value}: ₹{predicted_package[0]:.2f} LPA")
+  
+  # Plot
+  plt.figure(figsize=(8, 5))
+  sns.scatterplot(x='cgpa', y='package', data=data, label='Actual')
+  plt.plot(data['cgpa'], y_pred, color='red', label='SVM Prediction')
+  plt.title("SVM Regression: CGPA vs Package")
+  plt.xlabel("CGPA")
+  plt.ylabel("Package (in LPA)")
+  plt.legend()
+  plt.grid(True)
+  plt.savefig("assets/SVMRegressor.jpg")
+  
+  # Save before plot
+  plt.figure(figsize=(8, 5))
+  sns.boxplot(data=data)
+  plt.title("Feature Boxplots")
+  plt.savefig("assets/SVMRegressorBefore.jpg")`
+  }, 
+  
+  {
+    id: 11,
+    title: "SVM Classifier",
+    description: "Built a Support Vector Machine Classifier to predict purchase behavior based on age and estimated salary. Tuned across 100 random states and visualized decision regions for best performance using Seaborn and MLxtend.",
+    image: "assets/SVMClassifier.jpg",
+    image1: "assets/SVMClassifier1.jpg",
+    tech: [
+      { name: "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+      { name: "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+      { name: "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" },
+      { name: "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+      { name: "MLxtend", "color": "#ffe3e3", "textColor": "#c92a2a" }
+    ],
+    code: `# SVM Classifier for Purchase Prediction
+  
+  import pandas as pd
+  import numpy as np
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  from sklearn.model_selection import train_test_split
+  from sklearn.preprocessing import StandardScaler
+  from sklearn.svm import SVC
+  from mlxtend.plotting import plot_decision_regions
+  
+  # Load data
+  data = pd.read_csv("/Users/omgajipara/Desktop/Data Science/AI:ML/Machine Learning/Supervised Learning/Classification/DecisionTree/DesicionTree.csv")
+  x = data.drop(['Purchased', 'User ID', 'Gender'], axis=1)
+  y = data['Purchased']
+  
+  # Standardize features
+  scaler = StandardScaler()
+  x_scaled = scaler.fit_transform(x)
+  
+  # Boxplot visualization
+  for i in x:
+      sns.boxplot(x=i, data=data)
+      plt.show()
+  
+  # Scatterplot of actual data
+  sns.scatterplot(x='Age', y='EstimatedSalary', hue='Purchased', data=data)
+  plt.savefig('assets/SVMClassifier1.jpg')
+  plt.show()
+  
+  # Hyperparameter tuning over 100 random states
+  best_score = 0
+  best_state = 0
+  min_diff = float('inf')
+  
+  for state in range(101):
+      X_train, X_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=state)
+      model = SVC(kernel='rbf', random_state=state)
+      model.fit(X_train, y_train)
+      train_acc = model.score(X_train, y_train)
+      test_acc = model.score(X_test, y_test)
+      diff = abs(train_acc - test_acc)
+  
+      if test_acc > best_score or (test_acc == best_score and diff < min_diff):
+          best_score = test_acc
+          best_state = state
+          min_diff = diff
+  
+  print("✅ Best Random State:", best_state)
+  print(f"✅ Best Test Accuracy: {best_score*100:.2f}%")
+  print(f"✅ Min Train-Test Accuracy Diff: {min_diff:.4f}")
+  
+  # Final model training
+  x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=24)
+  svm = SVC()
+  svm.fit(x_train, y_train)
+  print("Final Accuracy:", svm.score(x_test, y_test) * 100)
+  
+  # Prediction for new input
+  inp = pd.DataFrame([[19, 19000]])
+  x_scaledinp = scaler.transform(inp)
+  print("Prediction for [19, 19000]:", svm.predict(x_scaledinp))
+  
+  # Final plot with decision regions
+  sns.scatterplot(x='Age', y='EstimatedSalary', hue='Purchased', data=data)
+  plot_decision_regions(x_scaled, y.to_numpy().astype(np.int_), clf=svm)
+  plt.figure(figsize=(7.5,4))
+  plt.savefig('assets/SVMClassifier.jpg')
+  plt.show()`
+  },  
+  {
+    id: 14,
+    title: "K-Means Clustering",
+    description: "Applied K-Means Clustering to the Iris dataset for unsupervised classification. Used Elbow Method to identify optimal clusters, visualized clusters with Seaborn pairplots, and enhanced analysis with boxplots and heatmaps.",
+    image1: "assets/KMeansClustering1.jpg",
+
+    image2: "assets/KMeansClustering2.jpg",
+    image: "assets/KMeansClustering.jpg",
+
+    tech: [
+      { name: "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+      { name: "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+      { name: "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" },
+      { name: "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+      { name: "Pandas", "color": "#ffe3e3", "textColor": "#c92a2a" }
+    ],
+    code: `# K-Means Clustering on Iris Dataset
+  
+  import pandas as pd
+  import numpy as np
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  from sklearn.cluster import KMeans
+  from sklearn.preprocessing import StandardScaler
+  
+  # Load data
+  data = pd.read_csv("/Users/omgajipara/Desktop/Data Science/AI:ML/Machine Learning/Unsupervised Learning/Clustering/K-Means Clustering/iris.csv")
+  New_Data = data.drop(['species'], axis=1)
+  
+  # Initial pairplot
+  sns.pairplot(data=New_Data)
+  plt.savefig('assets/KMeansClustering1.jpg')
+  plt.show()
+  
+  # Elbow Method to determine optimal k
+  wcss = []
+  for i in range(2, 21):
+      km = KMeans(n_clusters=i, init='k-means++', random_state=42)
+      km.fit(New_Data)
+      wcss.append(km.inertia_)
+  
+  plt.figure(figsize=(10, 5))
+  plt.plot(range(2, 21), wcss, marker="o")
+  plt.xticks(range(2, 21))
+  plt.xlabel("Number of Clusters (K)")
+  plt.ylabel("WCSS")
+  plt.title("Elbow Method for Optimal K")
+  plt.grid(True)
+  plt.savefig('assets/KMeansClustering.jpg')
+  plt.show()
+  
+  # Final Clustering with 3 Clusters
+  kmc = KMeans(n_clusters=3, random_state=42)
+  New_Data['species'] = kmc.fit_predict(New_Data)
+  
+  # Visualizing predicted clusters
+  sns.pairplot(data=New_Data, hue='species')
+  plt.show()
+  
+  # Comparison with actual species
+  sns.pairplot(data=data, hue='species')
+  plt.show()
+  
+  # Extra Visualizations
+  # Boxplot for feature distribution
+  for col in New_Data.columns[:-1]:
+      sns.boxplot(x='species', y=col, data=New_Data)
+      plt.title(f"Boxplot of {col} by Cluster")
+      plt.show()
+  
+  # Heatmap for correlation
+  sns.heatmap(New_Data.corr(), annot=True, cmap="coolwarm")
+  plt.title("Correlation Matrix")
+  plt.show()`
+  },  
+  {
+    id: 15,
+    title: "Hierarchical Clustering",
+    description: "Performed Hierarchical Agglomerative Clustering on the Iris dataset. Used dendrograms with Single and Ward linkage to determine optimal clusters. Visualized clustering results with Seaborn and Matplotlib, including PCA-based visualization and detailed pairplots.",
+    image1: "assets/HierarchicalClustering.jpg",
+    image2: "assets/HierarchicalClustering1.jpg",
+    tech: [
+      { "name": "Python", "color": "#e9f7fe", "textColor": "#0366d6" },
+      { "name": "Scikit-learn", "color": "#e6fcf5", "textColor": "#099268" },
+      { "name": "Seaborn", "color": "#fff3bf", "textColor": "#f08c00" },
+      { "name": "Matplotlib", "color": "#f3d9fa", "textColor": "#9c36b5" },
+      { "name": "Pandas", "color": "#ffe3e3", "textColor": "#c92a2a" }
+    ],
+    code: `import pandas as pd
+  import numpy as np
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  import scipy.cluster.hierarchy as sch
+  from sklearn.cluster import AgglomerativeClustering
+  from sklearn.decomposition import PCA
+  
+  # Load dataset
+  data = pd.read_csv("/Users/omgajipara/Desktop/Data Science/AI:ML/Machine Learning/Unsupervised Learning/Clustering/K-Means Clustering/iris.csv")
+  
+  # Drop species column for clustering
+  New_Data = data.drop(['species'], axis=1)
+  
+  # Heatmap of feature correlation
+  plt.figure(figsize=(6, 4))
+  sns.heatmap(New_Data.corr(), annot=True, cmap='coolwarm')
+  plt.title("Feature Correlation Heatmap")
+  plt.tight_layout()
+  plt.savefig("assets/CorrelationHeatmap.jpg")
+  plt.show()
+  
+  # Pairplot for visual inspection
+  sns.pairplot(New_Data)
+  plt.savefig("assets/RawDataPairplot.jpg")
+  plt.show()
+  
+  # --- DENDROGRAM: SINGLE LINKAGE ---
+  plt.figure(figsize=(8, 5))
+  sch.dendrogram(sch.linkage(New_Data, method='single', metric='euclidean'))
+  plt.title("Dendrogram - Single Linkage")
+  plt.xlabel("Samples")
+  plt.ylabel("Euclidean Distance")
+  plt.tight_layout()
+  plt.savefig("assets/Dendrogram_Single.jpg")
+  plt.show()
+  
+  # --- DENDROGRAM: WARD LINKAGE ---
+  plt.figure(figsize=(8, 5))
+  dendrogram = sch.dendrogram(sch.linkage(New_Data, method='ward'))
+  plt.axhline(y=60, color='r', linestyle='--')
+  plt.title("Dendrogram - Ward Linkage")
+  plt.xlabel("Samples")
+  plt.ylabel("Distance")
+  plt.tight_layout()
+  plt.savefig("assets/Dendrogram_Ward.jpg")
+  plt.show()
+  
+  # --- Agglomerative Clustering ---
+  model = AgglomerativeClustering(n_clusters=3, metric='euclidean', linkage='ward')
+  New_Data['Cluster'] = model.fit_predict(New_Data)
+  
+  # Print number of samples in each cluster
+  print("Cluster Counts:\\n", New_Data['Cluster'].value_counts())
+  
+  # --- 2D Scatter Plot ---
+  plt.figure(figsize=(6, 4))
+  sns.scatterplot(x='sepal_length', y='sepal_width', hue='Cluster', data=New_Data, palette='Set2')
+  plt.title("Hierarchical Clustering (2D)")
+  plt.tight_layout()
+  plt.savefig("assets/Hierarchical_Scatter.jpg")
+  plt.show()
+  
+  # --- Pairplot Colored by Clusters ---
+  sns.pairplot(New_Data, hue='Cluster', palette='Set2')
+  plt.suptitle("Pairplot - Clustered Data", fontsize=14)
+  plt.tight_layout()
+  plt.savefig("assets/Pairplot_Clusters.jpg")
+  plt.show()
+  
+  # --- PCA Visualization ---
+  pca = PCA(n_components=2)
+  pca_components = pca.fit_transform(New_Data.drop("Cluster", axis=1))
+  pca_df = pd.DataFrame(data=pca_components, columns=["PC1", "PC2"])
+  pca_df["Cluster"] = New_Data["Cluster"]
+  
+  plt.figure(figsize=(6, 4))
+  sns.scatterplot(x="PC1", y="PC2", hue="Cluster", palette="Set2", data=pca_df)
+  plt.title("Clusters Visualized with PCA")
+  plt.tight_layout()
+  plt.savefig("assets/PCA_Clusters.jpg")
+  plt.show()`
+  },
+
             // Application Projects
-            {
-                id: 9,
+ {
+                id: 12,
                 title: "Diabetes Prediction System",
                 description: "A practical application of machine learning in healthcare, this system predicts diabetes risk based on health metrics like glucose levels, BMI, and age. I developed a user-friendly interface and achieved 85% accuracy on test data.",
                 image: "assets/diabetes.png",
@@ -1101,7 +1621,7 @@ prediction = model.predict([[6, 148, 72, 35, 0, 33.6, 0.627, 50]])
 print("Diabetic" if prediction[0] else "Not Diabetic")`
             },
             {
-                id: 10,
+                id: 13,
                 title: "Tweet Sentiment Analysis",
                 description: "This NLP application classifies tweets as positive or negative sentiment. I implemented text preprocessing, feature extraction, and model training using both traditional ML and transformer-based approaches.",
                 image: "assets/TweetSentiment.jpg",
@@ -1201,56 +1721,8 @@ model.fit(X_train_vec, y_train)`
             pre.appendChild(button);
         }
         
-        // Show toast notification
-        function showToast(title, message) {
-            const toastContainer = document.querySelector('.toast-container');
-            const toastEl = document.createElement('div');
-            toastEl.className = 'toast show';
-            toastEl.setAttribute('role', 'alert');
-            toastEl.setAttribute('aria-live', 'assertive');
-            toastEl.setAttribute('aria-atomic', 'true');
-            
-            toastEl.innerHTML = `
-                <div class="toast-header">
-                    <strong class="me-auto">${title}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                    ${message}
-                </div>
-            `;
-            
-            toastContainer.appendChild(toastEl);
-            
-            // Initialize Bootstrap toast
-            const toast = new bootstrap.Toast(toastEl);
-            toast.show();
-            
-            // Remove toast after it hides
-            toastEl.addEventListener('hidden.bs.toast', () => {
-                toastEl.remove();
-            });
-        }
+       
         
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Show success message
-            showToast('Message Sent!', 'Thank you for your message. I will get back to you soon.');
-            
-            // Reset form
-            this.reset();
-            
-            // Log the form data (for demo purposes)
-            console.log('Form submitted:', { name, email, subject, message });
-        });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
